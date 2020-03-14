@@ -1,0 +1,51 @@
+<div class="container">
+    <h3>Cart Information</h3>
+    <hr>
+    <table class="table  table-striped"  >
+        <tr >
+           
+            <th>P.Code</th>
+            <br>
+            <th>Name</th>
+            <br>
+            <th>Photo</th>
+            <br>
+            <th>Price</th>
+            <br>
+            <th>Quantity</th>
+            <br>
+            <th>Sub Total</th>
+            <br>
+            <th>Remove</th>
+        </tr>
+        <tr *ngFor="let item of items">
+           
+            <td>{{item.product.id}}</td>
+            <br>
+            <td>{{item.product.name}}</td>
+            <br>
+            <td>
+                
+                <img src="{{item.product.photo}}" width="50">
+            </td>
+            <br>
+            <td>{{item.product.price}}</td>
+            <br>
+            <td>{{item.quantity}}</td>
+            <br>
+            <td>{{item.product.price * item.quantity}}</td>
+            <br>
+            <td>
+                <a (click)="remove(item.product.id)" class="btn btn-warning">Remove Item</a>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td colspan="6" ><h4>Total</h4></td>
+            <td>{{total}}</td>
+        </tr>
+    </table>
+    <a class="btn btn-primary btn-block" routerLink="/check">CHECK OUT</a>
+    <hr>
+    <!-- <button type="submit" routerLink="/check" class="site-btn login-btn">Checkout</button> -->
+    </div>

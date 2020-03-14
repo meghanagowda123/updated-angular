@@ -1,0 +1,21 @@
+label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  button{
+    background-color:grey;
+    height: 30px;
+    width: 20%;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    background-color: whitesmoke;
+    color: #2F4F4F;
+    width: 250px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 2px 2px #696969;
+  }
+  

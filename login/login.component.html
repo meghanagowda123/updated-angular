@@ -1,0 +1,27 @@
+<form method="post" (ngSubmit)="onSubmit()" ngNativeValidate>
+  <div class="imgcontainer">
+    <img src="../../assets/login avatar.png"  alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="login.userName" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="login.password" required>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+     <div>  
+    <button (click)="onSubmit">User Login</button>
+    <button (click)="onSubmit" href="addinventory">Seller Login</button>
+  </div> 
+     
+    
+
+    <!-- <button routerLink="/login">Login</button> -->
+    
+  </div>
+
+
+</form>

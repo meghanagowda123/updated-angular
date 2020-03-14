@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Buyer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h2>User SignUp Form</h2>
+  <hr>
+<div class="container">
+  <form (ngSubmit)="onSubmit()" ngNativeValidate>
+    <div class="form-group">
+      <div class="imgcontainer">
+        <img src="../../assets/img_avatar2.png"  alt="Avatar" class="avatar"/>
+      </div>
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" placeholder="First Name" pattern="^[a-zA-Z]+$" name="fnm" [(ngModel)]="customer.firstName" required minlength="2" maxlength="12" />
+    </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" placeholder="Last Name" pattern="^[a-zA-Z]+$" name="lnm" [(ngModel)]="customer.lastName" minlength="2" maxlength="12"/>
+      </div>
+
+      <div class="form-group">
+        <label for="userName">User Name</label>
+        <input type="text" class="form-control" placeholder="user Name" pattern="^[a-zA-Z]+$" name="unm" [(ngModel)]="customer.userName" required minlength="5" maxlength="15"/>
+      </div>
+      <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" placeholder="password" name="pwd" [(ngModel)]="customer.password"  required minlength="8" maxlength="15"/>
+    </div>
+    <div class="form-group">
+        <label for="emailId">Email:</label>
+        <input type="email" class="form-control" placeholder="email id" name="email" [(ngModel)]="customer.emailId" required />
+      </div>  
+    <div class="form-group">
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" class="form-control" pattern="\d{10}" placeholder="Mobile Number" name="mobilenum" [(ngModel)]="customer.mobileNumber" minlength="10" maxlength="10"/>
+        <span class="help-block">*Must Contain 10 digits Only</span>
+
+      </div>
+
+    
+      <!-- <button type="submit" class="btn btn-success">Sign Up</button> -->
+      <!-- <div>
+      <button type="button" class="btn btn-success" (click)="ngSubmit">SignUp</button>
+      </div>  -->
+      <button (click)="onSubmit">Sign Up</button>
+  </form>
+
+</div>
+
+</body>
+</html>
